@@ -1,0 +1,31 @@
+{
+    "name": "hackxiaoya/ipwry",
+    "description": "离线IP信息查询，纯真IP库",
+    "keywords": ["ip", "IPWry", "laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "hackxiaoya",
+            "email": "hackxiaoya@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hackxiaoya\\IPWry\\IPWryServiceProvider"
+            ],
+            "aliases" : {
+                "IPWry" : "Hackxiaoya\\IPWry\\Facades\\IPWry"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Hackxiaoya\\IPWry\\" : "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
