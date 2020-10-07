@@ -25,4 +25,4 @@ Facades用法
 
 在视图中
 > @inject('ipwry', 'ipwry')  
-> {{ $ipwry->query('127.0.0.1')->implode(' ') }}
+> {{ $ipwry->query('127.0.0.1')->implode(' ') }}  
