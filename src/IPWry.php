@@ -164,9 +164,9 @@ class IPWry
             if(strpos($record['country'],$v) === 0) {
                 $record['province'] = $v;
                 $record['city'] = str_replace($v,'',$record['country']);
-                if (strpos( $record['city'],'市') !== false) {
-                    $subCity = substr($record['city'],0,strrpos($record['city'],'市'));
-                    $record['city'] = $subCity.'市';
+                $isMatched = preg_match_all('/(.*?)市/', $record['city'], $matches);
+                if ($isMatched) {
+                    $record['city'] = $matches[0][0];
                 }
                 break;
             }
